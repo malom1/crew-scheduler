@@ -7,12 +7,12 @@ const uploadRoute = require("./routes/uploadRoute")
 const availabilityRoute = require("./routes/availabilityRoute");
 
 const app = express();
-
+ 
 app.use(cors());
 app.use(express.json());
 
 app.use("/api", availabilityRoute);
-app.use("/upload", uploadRoute);
+app.use("/api", uploadRoute);
 
 connectDB();
 
